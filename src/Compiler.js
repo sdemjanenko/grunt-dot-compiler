@@ -131,7 +131,7 @@ Compiler.prototype.getFileContent = function(filePath) {
       pendingPartialLoads[namespace] = content;
       return '';
     })
-    .replace(/^\s+|\s+$|[\r\n]+/gm, '')
+    .replace(/^\s+|\s+$|[\r\n]+/gm, ' ')
     .replace(/\/\*.*?\*\//gm,'');
 
   content = this.loadPendingPartials(content, pendingPartialLoads);
